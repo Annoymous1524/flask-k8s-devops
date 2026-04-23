@@ -13,7 +13,7 @@ def home():
             password=os.getenv("DB_PASSWORD"),
             database=os.getenv("DB_NAME")
         )
-        return "Connected to MariaDB 🚀"
+        return "Hello DevOps CI/CD 🚀"
     except Exception as e:
         return f"DB Connection Failed ❌: {e}"
 

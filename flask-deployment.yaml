@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: flask
-        image: flask-db-app
-        imagePullPolicy: Never
+        image: dkbhowmik0/flask-k8s-devops:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         env:
