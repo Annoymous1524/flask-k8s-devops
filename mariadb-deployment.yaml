@@ -44,24 +44,3 @@ spec:
       - name: mariadb-storage
         persistentVolumeClaim:
           claimName: mariadb-pvc
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mariadb
-spec:
-  ports:
-  - port: 3306
-  selector:
-    app: mariadb
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mariadb-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
