@@ -4,7 +4,7 @@ metadata:
   name: flask-app
   annotations:
     argocd-image-updater.argoproj.io/image-list: flask=dkbhowmik0/flask-k8s-devops
-    argocd-image-updater.argoproj.io/flask.update-strategy: newest-build
+    argocd-image-updater.argoproj.io/flask.update-strategy: latest
     argocd-image-updater.argoproj.io/flask.allow-tags: regexp:^[a-f0-9]{7}$
 spec:
   replicas: 1
