@@ -13,7 +13,7 @@ def home():
             password=os.getenv("DB_PASSWORD"),
             database=os.getenv("DB_NAME")
         )
-        return "Hello DevOps CI/CD 🚀"
+        return "Hello from version 2 🚀"
     except Exception as e:
         return f"DB Connection Failed ❌: {e}"
 
