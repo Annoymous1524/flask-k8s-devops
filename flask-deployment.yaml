@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: dkbhowmik0/flask-k8s-devops:5e40a7b
+        image: dkbhowmik0/flask-k8s-devops:fa491c4
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
