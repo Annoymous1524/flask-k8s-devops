@@ -21,5 +21,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t dkbhowmik0/flask-k8s-devops:latest .
+        docker build --no-cache -t dkbhowmik0/flask-k8s-devops:latest .
         docker push dkbhowmik0/flask-k8s-devops:latest
