@@ -383,4 +383,4 @@ if __name__ == "__main__":
     logger.info(f"🐳 Deployed as: {dashboard_state.pod_name}")
     logger.info(f"💾 Git commit: {dashboard_state.git_hash}")
     
-    socketio.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 8080)), debug=False)
+    socketio.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 5000)), debug=False, allow_unsafe_werkzeug=True)
