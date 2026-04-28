@@ -62,8 +62,7 @@ class DashboardState:
 # ========================================
 dashboard_state = DashboardState(
     version=os.getenv("VERSION", "4.0"),
-    git_hash=subprocess.run(['git', 'rev-parse', '--short', 'HEAD'], 
-                           capture_output=True, text=True).stdout.strip() if os.path.exists('.git') else "prod",
+    git_hash=os.getenv("GIT_HASH", "prod"),
     pod_name=os.getenv("HOSTNAME", os.getenv("POD_NAME", "dashboard")),
     db_status="initializing",
     uptime=0.0,
