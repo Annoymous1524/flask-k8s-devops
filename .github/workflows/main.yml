@@ -21,6 +21,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        IMAGE_TAG=$(git rev-parse --short HEAD)
-        docker build -t dkbhowmik0/flask-k8s-devops:$IMAGE_TAG .
-        docker push dkbhowmik0/flask-k8s-devops:$IMAGE_TAG
+        docker build -t dkbhowmik0/flask-k8s-devops:latest .
+        docker push dkbhowmik0/flask-k8s-devops:latest
