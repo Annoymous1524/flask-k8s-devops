@@ -4,8 +4,7 @@ metadata:
   name: flask-ingress
 spec:
   rules:
-  - host: flask.local
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
