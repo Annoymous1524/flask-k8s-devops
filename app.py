@@ -380,8 +380,12 @@ dashboard_cpu_usage_percent {dashboard_state.system.cpu_percent}
 # ========================================
 if __name__ == "__main__":
     start_time = time.time()
+
     logger.info(f"🚀 Starting Production Dashboard v{dashboard_state.version}")
     logger.info(f"🐳 Deployed as: {dashboard_state.pod_name}")
     logger.info(f"💾 Git commit: {dashboard_state.git_hash}")
-    
+
+    # 🔥 START BACKGROUND METRICS THREAD (THIS WAS MISSING)
+    threading.Thread(target=health_checker, daemon=True).start()
+
     socketio.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 8080)), debug=False)
